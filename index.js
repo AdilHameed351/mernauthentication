@@ -21,7 +21,7 @@ hbs.registerPartials(partials_path);
 const DB = "mongodb+srv://username:123123123@cluster0.v9eosf0.mongodb.net/mernstack?retryWrites=true&w=majority"
 
 app.get("/", (req, res) => {
-    res.render("index");
+    res.render("login");
 });
 
 app.get("/register", (req, res) => {
@@ -76,7 +76,7 @@ app.post("/login", async(req, res) => {
     } catch(error) {
         res.status(400).send("Invalid Email or Password");
     }
-})
+});
 
 app.listen(port, (req, res) => {
     console.log(`Connection is listening on port no. ${port}`);
